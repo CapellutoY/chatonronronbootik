@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+20.times do
+  Item.create(title: Faker::Cat.name, description: Faker::Cat.breed, price: Faker::Number.decimal(2), image_url: "http://random.cat/view/#{Faker::Number.between(1,1677)}")
+end
