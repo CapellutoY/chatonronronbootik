@@ -64,4 +64,3 @@ gem 'stripe'
 gem 'devise'
 
 gem 'faker'
->>>>>>> master
