@@ -1,0 +1,2 @@
+class AddIndexToUsersEmail < ApplicationRecord
+end
