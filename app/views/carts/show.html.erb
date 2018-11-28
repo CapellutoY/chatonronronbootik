@@ -23,6 +23,7 @@
             </tr>
           </thead>
           <tbody>
+<<<<<<< HEAD
             <%sum = 0; q = 0%>
             <%@cart.items.each do |c|%>
             <tr class="remove-data">
@@ -32,6 +33,21 @@
             </tr>
             <%q += 1%>
             <%end%>
+=======
+            <%%>
+            <tr class="remove-data">
+              <td class="product"><a href="shop-product.html"><%=%></a> <small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas inventore modi.</small></td>
+              <td class="price"><%=%></td>
+              <td class="quantity">
+                <div class="form-group">
+                  <input type="text" class="form-control" value="item">
+                </div>
+              </td>
+              <td class="remove"><a href="#" class="btn btn-remove btn-sm btn-default">Remove</a></td>
+              <td class="amount"></td>
+            </tr>
+            <%%>
+>>>>>>> master
             <tr>
               <td class="total-quantity" colspan="3">Total <%=q%> Items</td>
               <td class="total-amount"><%=sum%>$</td>
