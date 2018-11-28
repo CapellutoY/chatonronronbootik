@@ -22,4 +22,5 @@ class UserMailer < ApplicationMailer
         subject: "A customer bought an order !"
       )
     end
+  end
 end
