@@ -1,0 +1,67 @@
+<!-- Section Start -->
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="600" style="border-collapse: collapse;">
+  <tr>
+    <td>
+      <table bgcolor="#fafafa" align="center" border="0" cellpadding="0" cellspacing="0" width="580" style="border-collapse: collapse;">
+        <tr>
+          <td>
+            <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;">
+              <!-- Space -->
+              <tr><td style="font-size: 0; line-height: 0;" bgcolor="#f5f5f5" height="1">&nbsp;</td></tr>
+              <tr><td style="font-size: 0; line-height: 0;" height="20">&nbsp;</td></tr>
+              <tr>
+                <td width="100%" align="center" style="font-size: 28px; line-height: 34px; font-family:helvetica, Arial, sans-serif; color:#000000;">
+                  Your <strong>Order</strong>
+                </td>
+              </tr>
+              <!-- Space -->
+              <tr><td style="font-size: 0; line-height: 0;" height="20">&nbsp;</td></tr>
+            </table>
+            <!-- First Row -->
+            <% Order.find_by(user_id: @user.id).last.items.each do |item|%>
+              <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;">
+                <tr>
+                  <td>
+                    <table align="left" border="0" cellpadding="0" width="290" cellspacing="0" style="border-collapse: collapse;">
+                      <tr>
+                        <td>
+                          <img src="<%= item.image_url %>" width="290" alt="Cat : <%= item.title %>" style="display: block;"/>
+                        </td>
+                      </tr>
+                    </table>
+                    <!-- Grid Gutter 20px -->
+                    <table align="left" border="0" cellpadding="0" width="20" cellspacing="0" style="border-collapse: collapse;">
+                      <tr>
+                        <td>&nbsp;</td>
+                      </tr>
+                    </table>
+                    <table align="left" border="0" cellpadding="0" width="260" cellspacing="0" style="border-collapse: collapse;">
+                      <!-- Space -->
+                      <tr><td style="font-size: 0; line-height: 0;" height="15">&nbsp;</td></tr>
+                      <tr>
+                        <td>
+                          <span style="text-decoration:none; font-family: helvetica, Arial, sans-serif; font-size: 22px; color: #343434; line-height: 26px;" ><%= item.title %></span>
+                        </td>
+                      </tr>
+                      <!-- Space -->
+                      <tr><td style="font-size: 0; line-height: 0;" height="15">&nbsp;</td></tr>
+                      <tr>
+                        <td style="font-family: helvetica, Arial, sans-serif; font-size: 14px; color: #777777; line-height: 21px;">
+                          <%= item.description %>
+                        </td>
+                      </tr>
+                      <!-- Space -->
+                      <tr><td style="font-size: 0; line-height: 0;" height="10">&nbsp;</td></tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            <%end %>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+</table>
+<!-- Section End -->
