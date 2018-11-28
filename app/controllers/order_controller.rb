@@ -1,8 +1,9 @@
 class OrderController < ApplicationController
   def create
-    @cart = Cart.find(current_user.id)
-    @order = @cart
-    Order.new = @order
-    @cart.items.delete(Item.all)
+    Order.new(user_id: current_user.id).save
+    Cart.find(current_user.id).items.each do |item|
+      Order.find(current_user.id).items << item
+    end
+    Cart.find(current_user.id).items.delete(Item.all)
   end
 end

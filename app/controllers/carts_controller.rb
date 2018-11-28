@@ -6,10 +6,4 @@ class CartsController < ApplicationController
     cart = Cart.find(current_user.id)
     cart.items.delete(Item.find(params[:id]))
   end
-  def order
-    @cart = Cart.find(current_user.id)
-    @order = @cart
-    Order.new = @order
-    @cart.items.delete(Item.all)
-  end
 end
