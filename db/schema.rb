@@ -10,16 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2018_11_27_154242) do
-=======
-ActiveRecord::Schema.define(version: 2018_11_27_090558) do
->>>>>>> a2e601d2ef1f444a4ec62fce4116a5ff69d158a2
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-<<<<<<< HEAD
   create_table "carts", force: :cascade do |t|
     t.bigint "user_id"
     t.index ["user_id"], name: "index_carts_on_user_id"
@@ -28,34 +23,23 @@ ActiveRecord::Schema.define(version: 2018_11_27_090558) do
   create_table "carts_items", id: false, force: :cascade do |t|
     t.bigint "cart_id", null: false
     t.bigint "item_id", null: false
-    t.index ["cart_id", "item_id"], name: "index_carts_items_on_cart_id_and_item_id"
-    t.index ["item_id", "cart_id"], name: "index_carts_items_on_item_id_and_cart_id"
   end
 
-=======
->>>>>>> a2e601d2ef1f444a4ec62fce4116a5ff69d158a2
   create_table "items", force: :cascade do |t|
     t.string "title"
     t.text "description"
     t.decimal "price"
     t.string "image_url"
-<<<<<<< HEAD
   end
 
   create_table "items_orders", id: false, force: :cascade do |t|
     t.bigint "item_id", null: false
     t.bigint "order_id", null: false
-    t.index ["item_id", "order_id"], name: "index_items_orders_on_item_id_and_order_id"
-    t.index ["order_id", "item_id"], name: "index_items_orders_on_order_id_and_item_id"
   end
 
   create_table "orders", force: :cascade do |t|
     t.bigint "user_id"
     t.index ["user_id"], name: "index_orders_on_user_id"
-=======
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
->>>>>>> a2e601d2ef1f444a4ec62fce4116a5ff69d158a2
   end
 
   create_table "users", force: :cascade do |t|
@@ -71,9 +55,6 @@ ActiveRecord::Schema.define(version: 2018_11_27_090558) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-<<<<<<< HEAD
   add_foreign_key "carts", "users"
   add_foreign_key "orders", "users"
-=======
->>>>>>> a2e601d2ef1f444a4ec62fce4116a5ff69d158a2
 end
