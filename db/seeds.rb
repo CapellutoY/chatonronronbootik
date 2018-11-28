@@ -12,13 +12,13 @@
 end
 
 user = User.new
-user.email = 'test42@example.com'
+user.email = 'test@example.com'
 user.encrypted_password = '#$taawktljasktlw4aaglj'
 user.password = 'valid_password'
 user.password_confirmation = 'valid_password'
 user.save!
 
-  Cart.create(user_id: User.first.id)
+Cart.create(user_id: User.first.id)
 
-  Cart.first.items << Item.first
-  Cart.first.items << Item.find(5)
+Cart.first.items << Item.first
+Cart.first.items << Item.find(5)

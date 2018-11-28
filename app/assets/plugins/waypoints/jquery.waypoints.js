@@ -211,9 +211,9 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 
   /* Private */
   Context.prototype.add = function(waypoint) {
-    var axis = waypoint.options.horizontal ? 'horizontal' : 'vertical'
-    this.waypoints[axis][waypoint.key] = waypoint
-    this.refresh()
+    var axis = waypoint.options.horizontal ? 'horizontal' : 'vertical';
+    this.waypoints[axis][waypoint.key] = waypoint;
+    this.refresh();
   }
 
   /* Private */
@@ -397,9 +397,9 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
         var contextModifier, wasBeforeScroll, nowAfterScroll
         var triggeredBackward, triggeredForward
 
-        if (waypoint.element !== waypoint.element.window) {
-          elementOffset = waypoint.adapter.offset()[axis.offsetProp]
-        }
+        // if (waypoint.element !== waypoint.element.window) {
+        //   elementOffset = waypoint.adapter.offset()[axis.offsetProp]
+        // }
 
         if (typeof adjustment === 'function') {
           adjustment = adjustment.apply(waypoint)

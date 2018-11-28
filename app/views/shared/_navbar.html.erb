@@ -151,13 +151,15 @@
                     </thead>
                     <tbody>
                       <%sum = 0; q = 0%>
-                      <%@cart.items.each do |c|%>
-                      <tr class="remove-data">
-                        <td class="product"><a href="shop-product.html"><%=c.title%></a></td>
-                        <td class="price"> <%=c.price%> </td> <%sum += c.price%>
-                      </tr>
-                      <%q += 1%>
-                      <%end%>
+                      <% if @cart %>
+                        <%@cart.items.each do |c|%>
+                        <tr class="remove-data">
+                          <td class="product"><a href="shop-product.html"><%=c.title%></a></td>
+                          <td class="price"> <%=c.price%> </td> <%sum += c.price%>
+                        </tr>
+                        <%q += 1%>
+                        <%end%>
+                      <% end %>
                       <tr>
                         <td class="total-quantity" colspan="3">Total <%=q%> Items</td>
                         <td class="total-amount"><%=sum%>$</td>

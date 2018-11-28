@@ -3,7 +3,7 @@ Mailjet.configure do |config|
   Dotenv.load
   config.api_key = ENV['mailjet_api']
   config.secret_key = ENV['mailjet_secret']
-  config.default_from = 'chatonronron@mailjet.fr'
+  config.default_from = 'chatonronron_thp@hotmail.com'
   # Mailjet API v3.1 is at the moment limited to Send API.
   # We’ve not set the version to it directly since there is no other endpoint in that version.
   # We recommend you create a dedicated instance of the wrapper set with it to send your emails.
