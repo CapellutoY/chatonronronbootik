@@ -15,15 +15,16 @@
  *= require css/bootstrap.min
  *= require style
 
- *= require magnific-popup/magnific-popup.css
- *= require rs-plugin-5/css/settings.css
- *= require rs-plugin-5/css/layers.css
- *= require rs-plugin-5/css/navigation.css
- *= require animations.css
- *= require slick/slick.css
- *= require style.css
- *= require typography-default.css
- *= require skins/light_blue.css
- *= require custom.css
+ *= require magnific-popup/magnific-popup
+ *= require rs-plugin-5/css/settings
+ *= require rs-plugin-5/css/layers
+ *= require rs-plugin-5/css/navigation
+ *= require animations
+ *= require slick/slick
+ *= require style
+ *= require typography-default
+ *= require skins/light_blue
+ *= require custom
+ *= require font-awesome/css/font-awesome
 
  */

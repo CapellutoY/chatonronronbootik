@@ -7,7 +7,7 @@
 	// USE STRICT
 	"use strict";
 
-	$(document).ready(function() {
+	$(document).on("turbolinks:load", function() {
 
 		if ($('.boxed .fullscreen-bg').length>0) {
 			$("body").addClass("transparent-page-wrapper");

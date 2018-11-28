@@ -7,7 +7,7 @@ class UserMailer < ApplicationMailer
   def order_buyer(user)
     @user = user
     mail(
-      from: @company_email,
+      from: "chatonronron_thp@hotmail.com",
       to: user.email,
       subject: "You passed an order on our website !"
     )
@@ -19,7 +19,7 @@ class UserMailer < ApplicationMailer
       mail(
         from: @company_email,
         to: admin.email,
-        subject: "A customer bought an order !"
+        subject: "A customer passed an order !"
       )
     end
   end
