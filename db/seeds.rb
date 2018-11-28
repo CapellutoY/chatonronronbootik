@@ -12,7 +12,7 @@
 end
 
 user = User.new
-user.email = 'test@example.com'
+user.email = 'test42@example.com'
 user.encrypted_password = '#$taawktljasktlw4aaglj'
 user.password = 'valid_password'
 user.password_confirmation = 'valid_password'
