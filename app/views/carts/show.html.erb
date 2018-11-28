@@ -18,34 +18,29 @@
             <tr>
               <th>Product </th>
               <th>Price </th>
-              <th>Quantity</th>
               <th>Remove </th>
               <th class="amount">Total </th>
             </tr>
           </thead>
           <tbody>
-            <%%>
+            <%sum = 0; q = 0%>
+            <%@cart.items.each do |c|%>
             <tr class="remove-data">
-              <td class="product"><a href="shop-product.html"><%=%></a> <small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas inventore modi.</small></td>
-              <td class="price"><%=%></td>
-              <td class="quantity">
-                <div class="form-group">
-                  <input type="text" class="form-control" value="item">
-                </div>
-              </td>
-              <td class="remove"><a href="#" class="btn btn-remove btn-sm btn-default">Remove</a></td>
-              <td class="amount"></td>
+              <td class="product"><a href="shop-product.html"><%=c.title%></a> <small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas inventore modi.</small></td>
+              <td class="price"> <%=c.price%> </td> <%sum += c.price%>
+              <td class="remove"><%= link_to "Remove", "/carts/#{c.id}", method: :delete, class: "btn btn-remove btn-sm btn-default" %></td>
             </tr>
-            <%%>
+            <%q += 1%>
+            <%end%>
             <tr>
-              <td class="total-quantity" colspan="4">Total 8 Items</td>
-              <td class="total-amount">$1997.00</td>
+              <td class="total-quantity" colspan="3">Total <%=q%> Items</td>
+              <td class="total-amount"><%=sum%>$</td>
             </tr>
           </tbody>
         </table>
         <div class="text-right">
-          <a href="shop-cart.html" class="btn btn-group btn-default">Update Cart</a>
-          <a href="shop-checkout.html" class="btn btn-group btn-default">Checkout</a>
+          <a href="/carts/show" class="btn btn-group btn-default">Update Cart</a>
+          <%= link_to "Checkout", "/order/create", method: :post, class: "btn btn-group btn-default" %>
         </div>
 
       </div>
