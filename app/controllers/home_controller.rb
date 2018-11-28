@@ -5,5 +5,7 @@ class HomeController < ApplicationController
         Cart.new(user_id: current_user.id).save
       end
     end
+    @cart = Cart.find_by(user_id: current_user.id)
+    cart = Cart.find_by(user_id: current_user.id)
   end
 end
