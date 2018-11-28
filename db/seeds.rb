@@ -11,25 +11,12 @@
   Item.create(title: Faker::Cat.name, description: Faker::Cat.breed, price: Faker::Number.decimal(2), image_url: "http://random.cat/view/#{Faker::Number.between(1,1677)}")
 end
 
-<<<<<<< HEAD
 user = User.new
-<<<<<<< HEAD
 user.email = 'test42@example.com'
-=======
-user.email = 'test@example.com'
->>>>>>> master
 user.encrypted_password = '#$taawktljasktlw4aaglj'
 user.password = 'valid_password'
 user.password_confirmation = 'valid_password'
 user.save!
-=======
-  user = User.new
-  user.email = 'test@example.com'
-  user.encrypted_password = '#$taawktljasktlw4aaglj'
-  user.password = 'valid_password'
-  user.password_confirmation = 'valid_password'
-  user.save!
->>>>>>> 5156d337ddb6ab2654e9bbef42db216d7724514b
 
   Cart.create(user_id: User.first.id)
 
