@@ -42,6 +42,7 @@
             <div class="tab-pane active" id="pill-1">
 
               <div class="row grid-space-10">
+                <% compter = 1 %>
                 <% @items.each do |item| %>
                 <div class="col-lg-4">
                   <div class="listing-item white-bg bordered mb-20">
@@ -60,7 +61,36 @@
                       <div class="elements-list clearfix">
                         <span class="price"><%= item.price %> $</span>
                         <% if user_session %>
-                        <a href="#" class="pull-right margin-clear btn btn-sm btn-default-transparent btn-animated">Add To Cart<i class="fa fa-shopping-cart"></i></a>
+                          <%= form_tag cart_path(item.id), method: :put, class: "add_to_cart_item_#{compter}" do %>
+                            <%= hidden_field_tag :id, value: item.id %>
+                            <%= submit_tag "Add To Cart", class: "pull-right margin-clear btn btn-sm btn-default-transparent btn-animated" %>
+                          <% end %>
+                          <!-- <button class="">Add To Cart<i class="fa fa-shopping-cart"></i></button> -->
+                          <script>
+                            $(document).on("turbolinks:load", function (){
+                              $(".add_to_cart_item_<%=compter%>").on("submit", function(event){
+                                event.preventDefault()
+                                let formData = $(this).serialize()
+                                $.ajax({
+                                  url: $(this).attr("action"),
+                                  method: 'put',
+                                  data: formData,
+                                  success: function(){
+                                    for(let i = 0; i < 1; i++){
+                                      $('.beautiful-cart').prepend(
+                                        '<tr class="remove-data">'+
+                                          '<td class="product">'+
+                                            '<a href="shop-product.html"><%=item.title%></a>'+
+                                          '</td>'+
+                                          '<td class="price"> <%=item.price%> </td>'+
+                                        '</tr>')
+                                    }
+                                  }
+                                })
+                              })
+                            })
+                          </script>
+                          <% compter += 1 %>
                         <% end %>
                       </div>
                     </div>
@@ -71,30 +101,6 @@
             </div>
 
             <!-- pills end -->
-
-            <!-- pagination start -->
-            <nav aria-label="Page navigation">
-              <ul class="pagination justify-content-center">
-                <li class="page-item">
-                  <a class="page-link" href="#" aria-label="Previous">
-                    <i aria-hidden="true" class="fa fa-angle-left"></i>
-                    <span class="sr-only">Previous</span>
-                  </a>
-                </li>
-                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item"><a class="page-link" href="#">4</a></li>
-                <li class="page-item"><a class="page-link" href="#">5</a></li>
-                <li class="page-item">
-                  <a class="page-link" href="#" aria-label="Next">
-                    <i aria-hidden="true" class="fa fa-angle-right"></i>
-                    <span class="sr-only">Next</span>
-                  </a>
-                </li>
-              </ul>
-            </nav>
-            <!-- pagination end -->
           </div>
           <!-- main end -->
 
