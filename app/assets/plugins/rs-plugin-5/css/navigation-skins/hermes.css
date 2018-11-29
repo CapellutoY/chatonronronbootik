@@ -80,15 +80,15 @@ website:    http://www.themepunch.com
     transform:translateX(180px);
   -webkit-transform:translateX(180px);
       }
-  
+
 .hermes.tparrows:hover .tp-arr-imgholder {
    transform:translateX(0px);
-   -webkit-transform:translateX(0px);            
+   -webkit-transform:translateX(0px);
 }
 .hermes .tp-arr-titleholder {
   top:110px;
   width:180px;
-  text-align:left; 
+  text-align:left;
   display:block;
   padding:0px 10px;
   line-height:30px; background:#000;
@@ -151,20 +151,20 @@ website:    http://www.themepunch.com
 
 
 /* TABS */
-.hermes .tp-tab { 
-  opacity:1;  
+.hermes .tp-tab {
+  opacity:1;
   padding-right:10px;
   box-sizing:border-box;
  }
-.hermes .tp-tab-image 
-{ 
+.hermes .tp-tab-image
+{
   width:100%;
   height:60%;
   position:relative;
 }
-.hermes .tp-tab-content 
+.hermes .tp-tab-content
 {
-    background:rgb(54,54,54); 
+    background:rgb(54,54,54);
     position:absolute;
     padding:20px 20px 20px 30px;
     box-sizing:border-box;
@@ -183,9 +183,9 @@ website:    http://www.themepunch.com
   font-size:12px;
   margin-bottom:10px;
   }
-.hermes .tp-tab-title 
+.hermes .tp-tab-title
 {
-    display:block;	
+    display:block;
     color:#fff;
     font-size:16px;
     font-weight:800;
@@ -217,7 +217,6 @@ website:    http://www.themepunch.com
 }
 @media only screen and (max-width: 768px) {
   .hermes .tp-tab .tp-tab-title {font-size:12px;line-height:14px;}
-  .hermes .tp-tab-date {font-size:10px; line-height:12px;margin-bottom:5px;}
+  .hermes .tp-tab-date {font-size:10px; line-height:12px;margin-bottom: 5px;}
   .hermes .tp-tab-content {padding:10px 10px 10px 20px;}
 }
-
