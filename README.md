@@ -1,8 +1,8 @@
 # README
 ## FINE EQUIPE
-  Quentin (@Dremsis): Celui qui tire les ficelles derrière Emanuelle Macron.
-  Marin (@Marin): Seigneurs des 9 mers et d'un bon bout d'océan.
-  Yossi (@Yossi): Péon mais sexy <3.
+  Quentin (@Dremsis): Celui qui tire les ficelles derrière Emanuelle Macron.</br>
+  Marin (@Marin): Seigneurs des 9 mers et d'un bon bout d'océan.</br>
+  Yossi (@Yossi): Péon mais sexy <3.</br>
 ## Ruby Versions:
 
 * Ruby : v-2.5.1
