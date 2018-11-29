@@ -7,18 +7,30 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-20.times do
-  Item.create(title: Faker::Cat.name, description: Faker::Cat.breed, price: Faker::Number.decimal(2), image_url: "http://random.cat/view/#{Faker::Number.between(1,1677)}")
+20.times do |i|
+  Item.create(title: Faker::Cat.name, description: Faker::Cat.breed, price: Faker::Number.decimal(2), image_url: "#{i + 1}.jpg")
 end
 
 user = User.new
-user.email = 'test@example.com'
-user.encrypted_password = '#$taawktljasktlw4aaglj'
+user.email = 'yossi.capelluto@gmail.com'
+user.encrypted_password = 'azerty33'
+user.admin = true
 user.password = 'valid_password'
 user.password_confirmation = 'valid_password'
 user.save!
 
-Cart.create(user_id: User.first.id)
+user = User.new
+user.email = 'mcuville@gmail.com'
+user.encrypted_password = 'azerty33'
+user.admin = true
+user.password = 'valid_password'
+user.password_confirmation = 'valid_password'
+user.save!
 
-Cart.first.items << Item.first
-Cart.first.items << Item.find(5)
+user = User.new
+user.email = 'dremsis@hotmail.ca'
+user.encrypted_password = 'azerty33'
+user.admin = true
+user.password = 'valid_password'
+user.password_confirmation = 'valid_password'
+user.save!

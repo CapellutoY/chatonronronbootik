@@ -11,7 +11,7 @@
 
         <!-- page-title start -->
         <!-- ================ -->
-        <h1 class="page-title">Shop Product</h1>
+        <h1 class="page-title"><%= @item.title %></h1>
         <div class="separator-2"></div>
         <!-- page-title end -->
 
@@ -22,6 +22,7 @@
             <!-- Nav tabs -->
             <ul class="nav nav-pills">
               <li class="nav-item"><a class="nav-link active" href="#pill-1" data-toggle="tab" title="images"><i class="fa fa-camera pr-1"></i> Photo</a></li>
+              <img src="<%= asset_url(@item.image_url)%>" alt="">
             </ul>
             <!-- pills end -->
           </div>
@@ -47,7 +48,35 @@
               <span class="product price"><i class="fa fa-tag pr-10"></i><%= @item.price %> $</span>
               <% if user_session %>
               <div class="product elements-list pull-right clearfix">
-                <input type="submit" value="Add to Cart" class="margin-clear btn btn-default">
+                  <%= form_tag cart_path(@item.id), method: :put, class: "add_this_item" do %>
+                    <%= hidden_field_tag :id, value: @item.id %>
+                    <%= submit_tag "Add To Cart", class: "margin-clear btn btn-default" %>
+                  <% end %>
+                  <!-- <button class="">Add To Cart<i class="fa fa-shopping-cart"></i></button> -->
+                  <script>
+                    $(document).on("turbolinks:load", function (){
+                      $(".add_this_item").on("submit", function(event){
+                        event.preventDefault()
+                        let formData = $(this).serialize()
+                        $.ajax({
+                          url: $(this).attr("action"),
+                          method: 'put',
+                          data: formData,
+                          success: function(){
+                            for(let i = 0; i < 1; i++){
+                              $('.beautiful-cart').append(
+                                '<tr class="remove-data">'+
+                                  '<td class="product">'+
+                                    '<a href="shop-product.html"><%=@item.title%></a>'+
+                                  '</td>'+
+                                  '<td class="price"> <%=@item.price%> </td>'+
+                                '</tr>')
+                            }
+                          }
+                        })
+                      })
+                    })
+                  </script>
               </div>
               <% end %>
             </div>
