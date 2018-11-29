@@ -36,9 +36,4 @@
 Sous l'océan -Sebastien
 </br>
 "Fin" <=== Pour que la fin soit pas sale</br>
-.---.                  .--..   .</br>
-  |                    |   )\ / </br>
-  | .-. .-.  .--.--.   |--:  /  </br>
-  |(.-'(   ) |  |  |   |   )/ \ </br>
-  ' `--'`-'`-'  '  `-  '--''   '</br>
 # chatonronronbootik
