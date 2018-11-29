@@ -7,6 +7,11 @@
 
 * Ruby : v-2.5.1
 * Rails : v-5.2.1
+## Ce repo contient:
+* une version en prod : 
+* une version local
+</br>
+<strong>Attention:</strong> la version en prod ne contient pas le js du template et le moyen de paiement n'est pas fonctionnel, pour tester celui ci il faudra lancer la version local.
 ## Pour le paiement par stripe :
 * Le Card number de test est: 4242 4242 4242 4242
 * Le mois et l'année d'expiration sont au choix
