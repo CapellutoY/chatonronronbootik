@@ -1,25 +1,39 @@
 # README
+## FINE EQUIPE
+  Quentin (@Dremsis): Celui qui tire les ficelles derrière Emanuelle Macron.
+  Marin (@Marin): Seigneurs des 9 mers et d'un bon bout d'océan.
+  Yossi (@Yossi): Péon mais sexy <3.
+## Ruby Versions:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Ruby : v-2.5.1
+* Rails : v-5.2.1
 
-Things you may want to cover:
+## Lancemant de l'app
+'''
+* $git clone https://github.com/CapellutoY/chatonronronbootik.git
+'''
+'''
+* $bundle install
+'''
+'''
+* $rails db:create
+'''
+'''
+* $rails db:migrate
+'''
+'''
+* $rails db:seed
+'''
+'''
+* $rails server
+'''
+'''
+* http://localhost:3000/
+'''
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Enjoy dans les tréfonds de Marin :slurp: #paspropre
+'''
+Sous l'océan -Sebastien
+'''
+"Fin" <=== Pour que la fin soit pas sale
 # chatonronronbootik
