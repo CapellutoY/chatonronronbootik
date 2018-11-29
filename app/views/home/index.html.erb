@@ -9,65 +9,15 @@
     <div class="container">
       <div class="row justify-content-lg-center">
         <div class="col-lg-8 text-center pv-20">
-          <h2 class="title hc-element-invisible" data-animation-effect="fadeIn" data-effect-delay="100">Wellcome to <strong>Shop</strong></h2>
+          <h2 class="title hc-element-invisible" data-animation-effect="fadeIn" data-effect-delay="100">Wellcome to <strong>Chatonronron</strong></h2>
           <div class="separator hc-element-invisible mt-10" data-animation-effect="fadeIn" data-effect-delay="100"></div>
-          <p class="text-center hc-element-invisible" data-animation-effect="fadeIn" data-effect-delay="100">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi perferendis magnam ea necessitatibus, officiis voluptas odit! Aperiam omnis, cupiditate laudantium velit nostrum, exercitationem accusamus, possimus soluta illo deserunt tempora qui.</p>
+          <p class="text-center hc-element-invisible" data-animation-effect="fadeIn" data-effect-delay="100">
         </div>
       </div>
     </div>
-    <!-- section start -->
-    <!-- ================ -->
-    <div class="light-translucent-bg section">
-      <div class="container-fluid">
-        <!-- filters start -->
-        <div class="sorting-filters text-center mb-20 d-flex justify-content-center">
-          <form class="form-inline">
-            <div class="form-group">
-              <label>Sort by</label>
-              <select class="form-control">
-                <option selected="selected">Date</option>
-                <option>Price</option>
-                <option>Model</option>
-              </select>
-            </div>
-            <div class="form-group ml-1">
-              <label>Order</label>
-              <select class="form-control">
-                <option selected="selected">Acs</option>
-                <option>Desc</option>
-              </select>
-            </div>
-            <div class="form-group ml-1">
-              <label>Price $ (min/max)</label>
-              <input type="text" class="form-control">
-            </div>
-            <div class="form-group ml-1">
-              <label class="invisible">Price $ (max)</label>
-              <input type="text" class="form-control">
-            </div>
-            <div class="form-group ml-1">
-              <label>Category</label>
-              <select class="form-control">
-                <option selected="selected">Smartphones</option>
-                <option>Tablets</option>
-                <option>Smart Watches</option>
-                <option>Desktops</option>
-                <option>Software</option>
-                <option>Accessories</option>
-              </select>
-            </div>
-            <div class="form-group ml-1">
-              <a href="#" class="btn btn-default">Submit</a>
-            </div>
-          </form>
-        </div>
-        <!-- filters end -->
-      </div>
-    </div>
-    <!-- section end -->
   </div>
   <!-- banner end -->
-  
+
   <!-- main-container start -->
   <!-- ================ -->
   <section class="main-container">
@@ -87,15 +37,16 @@
             <li class="nav-item"><a class="nav-link" href="#pill-3" role="tab" data-toggle="tab" title="Top Sellers"><i class=" fa fa-arrow-up"></i> Top Sellers</a></li>
           </ul>
           <!-- Tab panes -->
+
           <div class="tab-content clear-style">
             <div class="tab-pane active" id="pill-1">
+
               <div class="row grid-space-10">
+                <% @items.each do |item| %>
                 <div class="col-lg-4">
                   <div class="listing-item white-bg bordered mb-20">
                     <div class="overlay-container">
-                      <img src="images/product-1.jpg" alt="">
-                      <a class="overlay-link popup-img-single" href="images/product-1.jpg"><i class="fa fa-search-plus"></i></a>
-                      <span class="badge">30% OFF</span>
+                      <a class="overlay-link popup-img-single" href= "" <i class="fa fa-search-plus"></i></a>
                       <div class="overlay-to-top links">
                         <span class="small">
                           <a href="#" class="btn-sm-link"><i class="fa fa-heart-o pr-10"></i>Add to Wishlist</a>
@@ -104,17 +55,21 @@
                       </div>
                     </div>
                     <div class="body">
-                      <h3><a href="shop-product.html">Suscipit consequatur velit</a></h3>
-                      <p class="small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas inventore modi.</p>
+                      <h3><a href="items/<%= item.id %>"><%= item.title %></a></h3>
+                      <p class="small"><%= item.description %></p>
                       <div class="elements-list clearfix">
-                        <span class="price"><del>$100.00</del> $70.00</span>
+                        <span class="price"><%= item.price %> $</span>
+                        <% if user_session %>
                         <a href="#" class="pull-right margin-clear btn btn-sm btn-default-transparent btn-animated">Add To Cart<i class="fa fa-shopping-cart"></i></a>
+                        <% end %>
                       </div>
                     </div>
                   </div>
                 </div>
+                <% end %>
               </div>
             </div>
+
             <!-- pills end -->
 
             <!-- pagination start -->
