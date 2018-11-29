@@ -6,5 +6,6 @@ class HomeController < ApplicationController
       end
       @cart = Cart.find_by(user_id: current_user.id)
     end
+    @items = Item.all
   end
 end

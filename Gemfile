@@ -68,3 +68,5 @@ gem 'faker'
 gem 'mailjet'
 
 gem 'dotenv'
+
+gem "google-cloud-storage", "~> 1.11", require: false

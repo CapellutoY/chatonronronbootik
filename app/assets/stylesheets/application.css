@@ -28,3 +28,8 @@
  *= require font-awesome/css/font-awesome
 
  */
+
+ #home:hover {
+   text-decoration: none; #important
+   color: black; #important
+ }
