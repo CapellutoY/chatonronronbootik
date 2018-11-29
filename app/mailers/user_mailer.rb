@@ -1,21 +1,19 @@
 class UserMailer < ApplicationMailer
 
-  def initialize
-    @company_email = "chatonronron_thp@hotmail.com"
-  end
-
   def order_buyer(user)
+    @company_email = "chatonronron_thp@hotmail.com"
     @user = user
     mail(
-      from: "chatonronron_thp@hotmail.com",
-      to: user.email,
+      from: @company_email,
+      to: @user.email,
       subject: "You passed an order on our website !"
     )
   end
 
   def order_admin(user)
+    @company_email = "chatonronron_thp@hotmail.com"
     @user = user
-    User.find_by(admin: true).each do |admin|
+    User.where(:admin => true).each do |admin|
       mail(
         from: @company_email,
         to: admin.email,

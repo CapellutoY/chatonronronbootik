@@ -18,7 +18,7 @@
               <tr><td style="font-size: 0; line-height: 0;" height="20">&nbsp;</td></tr>
             </table>
             <!-- First Row -->
-            <% Order.find_by(user_id: @user.id).last.items.each do |item|%>
+            <% @user.orders.last.items.each do |item|%>
               <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;">
                 <tr>
                   <td>
