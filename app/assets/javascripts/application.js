@@ -28,3 +28,10 @@
 //= require isotope/isotope.pkgd.min
 //= countTo/jquery.countTo
 //= slick/slick.min
+
+jQuery(document).ready(function() {
+    jQuery('.add-to-cart').click(function() {
+        var iframe = document.createElement('my_cart_iframe');
+        iframe.onload = function() { alert('Item added'); };
+    });
+});
