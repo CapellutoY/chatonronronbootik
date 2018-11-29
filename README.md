@@ -9,31 +9,31 @@
 * Rails : v-5.2.1
 
 ## Lancemant de l'app
-```
+'''
 * $git clone https://github.com/CapellutoY/chatonronronbootik.git
-```
-```
+'''
+'''
 * $bundle install
-```
-```
+'''
+'''
 * $rails db:create
-```
-```
+'''
+'''
 * $rails db:migrate
-```
-```
+'''
+'''
 * $rails db:seed
-```
-```
+'''
+'''
 * $rails server
-```
-```
-*http://localhost:3000/
-```
+'''
+'''
+* http://localhost:3000/
+'''
 
-* Enjoy dans les tréfonds de Marin :slurp: #paspropre</br>
-
+* Enjoy dans les tréfonds de Marin :slurp: #paspropre
+'''
 Sous l'océan -Sebastien
-</br>
-"Fin" <=== Pour que la fin soit pas sale</br>
+'''
+"Fin" <=== Pour que la fin soit pas sale
 # chatonronronbootik

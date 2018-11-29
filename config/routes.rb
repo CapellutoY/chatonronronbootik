@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   get '/mycart', to: 'carts#show'
   resources :items
   resources :charges
+  get '/myorders', to: 'order#show'
 end

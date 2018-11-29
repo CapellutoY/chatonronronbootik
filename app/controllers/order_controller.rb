@@ -10,4 +10,7 @@ class OrderController < ApplicationController
     Cart.find(current_user.id).items.delete(Item.all)
     redirect_to '/charges/new'
   end
+  def show
+    @orders = User.find(current_user.id).orders
+  end
 end
