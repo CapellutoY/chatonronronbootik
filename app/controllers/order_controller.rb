@@ -7,5 +7,6 @@ class OrderController < ApplicationController
     UserMailer.order_buyer(User.find(current_user.id)).deliver
     UserMailer.order_admin(User.find(current_user.id)).deliver
     Cart.find(current_user.id).items.delete(Item.all)
+    redirect_to '/charges/new' method :post
   end
 end

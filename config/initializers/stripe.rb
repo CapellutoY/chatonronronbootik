@@ -1,5 +1,5 @@
+Dotenv.load
 Rails.configuration.stripe = {
-  Dotenv.load
   :publishable_key => ENV['Stripe_publishable_key'],
   :secret_key      => ENV['Stripe_secret_key']
 }
