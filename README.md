@@ -7,8 +7,11 @@
 
 * Ruby : v-2.5.1
 * Rails : v-5.2.1
-
-## Lancemant de l'app
+## Pour le paiement par stripe :
+* Le Card number de test est: 4242 4242 4242 4242
+* Le mois et l'année d'expiration sont au choix
+* Le code a trois chiffres est a votre choix
+## Lancemant de l'app:
 '''
 * $git clone https://github.com/CapellutoY/chatonronronbootik.git
 '''
@@ -28,9 +31,8 @@
 * $rails server
 '''
 '''
-* http://localhost:3000/
+*  http://localhost:3000/
 '''
-
 * Enjoy dans les tréfonds de Marin :slurp: #paspropre
 '''
 Sous l'océan -Sebastien
