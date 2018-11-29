@@ -3,9 +3,9 @@
      <%= label_tag 'amount', 'To Pay', class: 'amount' %>
      <%= label_tag 'amount', "$#{@amount}.00", class: 'amount-figure' %>
  </article>
-
+    <%Dotenv.load%>
  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-    data-key="<%= Rails.application.credentials.stripe[:publishable_key] %>"
+    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
     data-description="Your payment description"
     data-amount="<%= @amount * 100 %>">
   </script>
