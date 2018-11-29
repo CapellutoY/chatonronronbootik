@@ -12,19 +12,19 @@
 * Le mois et l'année d'expiration sont au choix
 * Le code a trois chiffres est a votre choix
 ## Lancemant de l'app:
-'''
+
 * $git clone https://github.com/CapellutoY/chatonronronbootik.git
-'''
+
 * $bundle install
-'''
+
 * $rails db:create
-'''
+
 * $rails db:migrate
-'''
+
 * $rails db:seed
-'''
+
 * $rails server
-'''
+
 *  http://localhost:3000/
 
 * Enjoy dans les tréfonds de Marin :slurp: #paspropre</br>
