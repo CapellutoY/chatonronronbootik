@@ -9,7 +9,7 @@
 * Rails : v-5.2.1
 
 ## Ce repo contient:
-* une version en prod : <strong>lien Heroku</strong>
+* une version en prod : <strong>https://chaton-ronron.herokuapp.com/</strong>
 * une version local
 </br>
 <strong>Attention:</strong> la version en prod ne contient pas le js du template et le moyen de paiement n'est pas fonctionnel, pour tester celui ci il faudra lancer la version local.</br>
