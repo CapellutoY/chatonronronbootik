@@ -1,8 +1,8 @@
 # README
 ## FINE EQUIPE
- <strong> Quentin </strong>(@Dremsis): Celui qui tire les ficelles derrière Emanuelle Macron.</br>
- <strong> Marin </strong>(@Marin): Seigneurs des 9 mers et d'un bon bout d'océan.</br>
- <strong> Yossi </strong>(@Yossi): Péon mais sexy <3.</br>
+ <strong> Quentin </strong>(@Dremsis)
+ <strong> Marin </strong>(@Marin)
+ <strong> Yossi </strong>(@Yossi)
 ## Ruby Versions:
 
 * Ruby : v-2.5.1
@@ -34,7 +34,4 @@
 
 *  http://localhost:3000/
 
-* Enjoy dans les tréfonds de Marin :slurp: #paspropre</br>
-Sous l'océan -Sebastien</br>
-"Fin" <=== Pour que la fin soit pas sale</br>
 # chatonronronbootik
